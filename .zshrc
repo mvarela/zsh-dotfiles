@@ -37,20 +37,50 @@ source $ZSH/oh-my-zsh.sh
 
 
 
+function do_linux_aliases {
+alias l='ls -lah --color'
+alias ls='ls --color'
+export EDITOR='emacsclient.emacs24 -t -aemacs24'
+export VISUAL='emacsclient.emacs24 -t -aemacs24'
+}
+function do_mac_aliases {
 alias l='gls -lah --color'
 alias ls='gls --color'
-#alias x='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
-alias pla='xelatex -interaction=nonstopmode'
 alias cp='/usr/local/bin/gcp'
 alias mv='gmv'
 alias rm='grm'
 alias ln='gln'
 alias awk='gawk'
-alias princess='ssh mvrmartin@princess.willab.fi'
-alias qoetus='ssh mvr@qoetus.willab.fi'
 export EDITOR='~/bin/x'
 export VISUAL='~/bin/x'
 export ALTERNATE_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs"
+}
+
+case `uname` in
+    Linux)
+        do_linux_aliases
+        ;;
+    Darwin)
+        do_mac_aliases
+        ;;
+esac
+alias pla='xelatex -interaction=nonstopmode'
+alias princess='ssh mvrmartin@princess.willab.fi'
+alias qoetus='ssh mvr@qoetus.willab.fi'
+# alias l='gls -lah --color'
+# alias ls='gls --color'
+# #alias x='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
+# alias pla='xelatex -interaction=nonstopmode'
+# alias cp='/usr/local/bin/gcp'
+# alias mv='gmv'
+# alias rm='grm'
+# alias ln='gln'
+# alias awk='gawk'
+# alias princess='ssh mvrmartin@princess.willab.fi'
+# alias qoetus='ssh mvr@qoetus.willab.fi'
+# export EDITOR='~/bin/x'
+# export VISUAL='~/bin/x'
+# export ALTERNATE_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs"
 
 
 PATH=~/Dropbox/share/bin/:~/bin/:~/Library/Haskell/bin/:/usr/local/bin:$PATH
