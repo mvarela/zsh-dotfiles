@@ -89,11 +89,10 @@ PATH=$PATH:/Users/mvr/.gem/ruby/1.8/bin
 export PATH
 
 
-
-source "`brew --prefix grc`/etc/grc.bashrc"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+if Darwin=~`uname -a`; then
+    source "`brew --prefix grc`/etc/grc.bashrc"
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
