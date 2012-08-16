@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 function do_linux_aliases {
 alias l='ls -lah --color'
 alias ls='ls --color'
+alias x='emacsclient.emacs24 -t -aemacs24'
 export EDITOR='emacsclient.emacs24 -t -aemacs24'
 export VISUAL='emacsclient.emacs24 -t -aemacs24'
 }
