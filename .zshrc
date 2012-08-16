@@ -89,7 +89,7 @@ PATH=$PATH:/Users/mvr/.gem/ruby/1.8/bin
 export PATH
 
 
-if Darwin=~`uname -a`; then
+if [[ "`uname`" == "Darwin" ]]; then
     source "`brew --prefix grc`/etc/grc.bashrc"
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
