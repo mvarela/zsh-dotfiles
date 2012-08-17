@@ -37,14 +37,14 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-function do_linux_aliases {
+function __mvr_do_linux_aliases {
 alias l='ls -lah --color'
 alias ls='ls --color'
 alias x='emacsclient.emacs24 -t -aemacs24'
 export EDITOR='emacsclient.emacs24 -t -aemacs24'
 export VISUAL='emacsclient.emacs24 -t -aemacs24'
 }
-function do_mac_aliases {
+function __mvr_do_mac_aliases {
 alias l='gls -lah --color'
 alias ls='gls --color'
 alias cp='/usr/local/bin/gcp'
@@ -59,10 +59,10 @@ export ALTERNATE_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs"
 
 case `uname` in
     Linux)
-        do_linux_aliases
+        __mvr_do_linux_aliases
         ;;
     Darwin)
-        do_mac_aliases
+        __mvr_do_mac_aliases
         ;;
 esac
 alias pla='xelatex -interaction=nonstopmode'
