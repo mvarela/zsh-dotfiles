@@ -44,6 +44,6 @@ echo $HOSTTYPE
 }
 
 PROMPT='
-'%{$bg[green]%}%{$fg[black]%}' '%n@%m' '\(`hosttype`\)' '%{$reset_color%}%{$fg[green]%}%{$bg[blue]%}$'\u2b80'%{$reset_color%}%{$fg[white]%}%{$bg[blue]%}' '%1~$'$(git_prompt_info) '%{$reset_color%}%{$fg[blue]%}$'\u2b80\n\nλ%{$reset_color%} '
+'%{$bg[green]%}%{$fg[black]%}' '%n@%m\(`hosttype`\)' '%{$reset_color%}%{$fg[green]%}%{$bg[blue]%}$'\u2b80'%{$reset_color%}%{$fg[white]%}%{$bg[blue]%}' '%1~$'$(git_prompt_info) '%{$reset_color%}%{$fg[blue]%}$'\u2b80\n\nλ%{$reset_color%} '
 
 # RPROMPT=%{$POWERLINE_COLOR_FG_WHITE%}$' \u2b82%{$reset_color%}%{$POWERLINE_COLOR_BG_WHITE%} %{$POWERLINE_COLOR_FG_GRAY%}%D{%X}%  \u2b82%{$POWERLINE_COLOR_BG_GRAY%}%{$POWERLINE_COLOR_FG_WHITE%} %D{%Y-%m-%e}%f %{$reset_color%}'
